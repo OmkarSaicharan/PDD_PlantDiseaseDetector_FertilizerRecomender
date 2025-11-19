@@ -1,0 +1,197 @@
+[
+    {
+        "name": "Apple___Apple_scab",
+        "cause": "Fungus Venturia inaequalis. Favorable conditions are cool, wet weather.",
+        "cure": "Prune and destroy infected leaves, select resistant varieties. Spray Myclobutanil (10g/100L), Captan (200g/100L), or Mancozeb (200g/100L) at green tip and every 7–10 days when wet weather persists. Fertilize with 10:10:10 NPK: 100–200kg/acre, 1–2kg/mature tree, 250–500g/young tree in spring."
+    },
+    {
+        "name": "Apple___Black_rot",
+        "cause": "Caused by the fungus Botryosphaeria obtusa.",
+        "cure": "Prune and remove infected fruit and branches, maintain orchard sanitation. Spray Captan (200g/100L), Topsin-M (70g/100L), or Mancozeb (200g/100L) at petal fall and every 10–14 days in wet periods. Fertilize with 10:10:10 NPK: 100–200kg/acre, 1–2kg/mature tree, 250–500g/young tree in early spring."
+    },
+    {
+        "name": "Apple___Cedar_apple_rust",
+        "cause": "Fungus Gymnosporangium juniperi-virginianae. Requires junipers as an alternate host.",
+        "cure": "Remove all nearby juniper or cedar trees. Use resistant apple varieties. Spray Myclobutanil (10g/100L), Mancozeb (200g/100L), or Propiconazole (10ml/100L) at pink bud and every 7–10 days until 3–4 weeks post-bloom. Fertilize with 10:10:10 NPK: 100–200kg/acre, 1–2kg/mature tree, 250–500g/young tree in spring."
+    },
+    {
+        "name": "Apple___healthy",
+        "cause": "No disease present.",
+        "cure": "Prune annually, maintain tree health and sanitation. Fertilize with 10:10:10 NPK: 100–200kg/acre, 1–2kg/mature tree, 250–500g/young tree in spring."
+    },
+    {
+        "name": "Single diseased plant leaf allowed",
+        "cause": "image is scanned but No disease or multiple leaf detected.",
+        "cure": "Not applicable.Try to give clear and single diseased plant leaf. provide clear image for more accurate."
+    },
+    {
+        "name": "Blueberry___healthy",
+        "cause": "No disease present.",
+        "cure": "Prune, mulch, and maintain air circulation. Fertilize with 12:4:8 NPK: 30–50kg/acre in early spring."
+    },
+    {
+        "name": "Cherry___Powdery_mildew",
+        "cause": "Fungus Podosphaera clandestina.",
+        "cure": "Prune trees to improve airflow, remove infected shoots, and dispose of all prunings away from the orchard. Spray sulfur-based fungicide (e.g., Thiovit, as per label) or Myclobutanil (10g/100L water) at the first appearance of powdery mildew and repeat every 10–14 days if conditions stay humid. Alternate fungicides to prevent resistance. Fertilize with 10:10:10 NPK: use 75–100kg per acre (37–50kg per half acre, 19–25kg per quarter acre), or 1kg around mature tree drip lines in early spring. Mulch to conserve moisture and suppress weeds."
+    },
+    {
+        "name": "Cherry___healthy",
+        "cause": "No disease present.",
+        "cure": "Prune, maintain good orchard sanitation. Fertilize with 10:10:10 NPK: 75–100kg/acre in spring."
+    },
+    {
+        "name": "Corn___Cercospora_leaf_spot Gray_leaf_spot",
+        "cause": "Fungus Cercospora zeae-maydis.",
+        "cure": "Plant resistant hybrid varieties and rotate with non-corn crops annually. Remove previous crop debris from the field. Spray Propiconazole (Tilt, 250ml per acre) at the first sign of disease and repeat every 10–14 days during prolonged wet weather. Use a high-clearance sprayer for full coverage. Fertilize with 15:15:15 NPK: apply 100kg per acre at sowing, 50kg for half acre, 25kg for quarter acre, or 20–40g per plant in small plots. Follow all label instructions and consult local extension services for precise recommendations."
+    },
+    {
+        "name": "Corn___Common_rust",
+        "cause": "Fungus Puccinia sorghi.",
+        "cure": "Grow resistant hybrids. Spray Propiconazole (250ml/acre) or Mancozeb (200g/100L) as needed. Fertilize with 15:15:15 NPK: 100kg/acre."
+    },
+    {
+        "name": "Corn___Northern_Leaf_Blight",
+        "cause": "Fungus Exserohilum turcicum.",
+        "cure": "Use resistant hybrids, rotate crops. Spray Azoxystrobin at label rate if symptoms appear. Fertilize 15:15:15 NPK: 100kg/acre at planting."
+    },
+    {
+        "name": "Corn___healthy",
+        "cause": "No disease present.",
+        "cure": "Rotate crops, timely fertilizer. Apply 15:15:15 NPK: 100kg/acre (50kg/half, 25kg/quarter acre)."
+    },
+    {
+        "name": "Grape___Black_rot",
+        "cause": "Fungus Guignardia bidwellii.",
+        "cure": "Prune all infected fruit/wood. Spray Mancozeb (200g/100L), Captan (200g/100L), or Myclobutanil (10g/100L) at early shoot growth and repeat before wet/humid spells. Fertilize with 10:10:10 NPK: 75–100kg/acre."
+    },
+    {
+        "name": "Grape___Esca_(Black_Measles)",
+        "cause": "Fungal complex incl. Phaeomoniella chlamydospora.",
+        "cure": "Prune and destroy infected canes/wood. Avoid trunk wounds. Fertilize with 10:10:10 NPK: 75–100kg/acre."
+    },
+    {
+        "name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+        "cause": "Fungus Pseudocercospora vitis.",
+        "cure": "Increase ventilation, remove debris. Spray Mancozeb (200g/100L) or copper fungicides. Fertilize with 10:10:10 NPK: 75–100kg/acre."
+    },
+    {
+        "name": "Grape___healthy",
+        "cause": "No disease present.",
+        "cure": "Prune annually, weed control, mulch. Fertilize with 10:10:10 NPK: 75–100kg/acre in spring."
+    },
+    {
+        "name": "Orange___Haunglongbing_(Citrus_greening)",
+        "cause": "Bacterium Candidatus Liberibacter spp. Spread by psyllid insects.",
+        "cure": "Remove infected trees. Control psyllids (Imidacloprid as per label). Fertilize with citrus NPK (8:8:8, 100kg/acre if indicated)."
+    },
+    {
+        "name": "Peach___Bacterial_spot",
+        "cause": "Bacterium Xanthomonas campestris pv. pruni.",
+        "cure": "Plant resistant varieties. Spray copper-based bactericide (Copper Oxychloride 200g/100L) from bud break every 10–14 days. Fertilize 10:10:10 NPK: 75–100kg/acre."
+    },
+    {
+        "name": "Peach___healthy",
+        "cause": "No disease present.",
+        "cure": "Prune, remove mummies, fertilize with 10:10:10 NPK: 75–100kg/acre in spring."
+    },
+    {
+        "name": "Pepper,_bell___Bacterial_spot",
+        "cause": "Bacterium Xanthomonas campestris pv. vesicatoria.",
+        "cure": "Plant resistant types, rotate crops. Spray copper-based bactericide (Kocide 200g/100L) at first signs and repeat. Fertilize with 12:12:17 NPK: 60kg/acre."
+    },
+    {
+        "name": "Pepper,_bell___healthy",
+        "cause": "No disease present.",
+        "cure": "Practice crop rotation, maintain soil health. Fertilize 12:12:17 NPK: 60kg/acre at planting."
+    },
+    {
+        "name": "Potato___Early_blight",
+        "cause": "Fungus Alternaria solani.",
+        "cure": "Practice rotation, remove debris. Spray Mancozeb (200g/100L) or Chlorothalonil (200g/100L) at early symptoms. Fertilize 12:12:17 NPK: 100kg/acre at planting."
+    },
+    {
+        "name": "Potato___Late_blight",
+        "cause": "Pathogen Phytophthora infestans.",
+        "cure": "Use resistant varieties, rotate crops. Spray Metalaxyl (10g/100L) or Mancozeb (200g/100L) at first symptoms and repeat 7–10 days. Fertilize 12:12:17 NPK: 100kg/acre."
+    },
+    {
+        "name": "Potato___healthy",
+        "cause": "No disease present.",
+        "cure": "Rotate crops, proper hilling. Fertilize 12:12:17 NPK: 100kg/acre."
+    },
+    {
+        "name": "Raspberry___healthy",
+        "cause": "No disease present.",
+        "cure": "Annual pruning, weed control, mulch. Fertilize 10:10:10 NPK: 50kg/acre."
+    },
+    {
+        "name": "Soybean___healthy",
+        "cause": "No disease present.",
+        "cure": "Practice crop rotation. Use inoculated seed for nitrogen. Fertilize as per soil test."
+    },
+    {
+        "name": "Squash___Powdery_mildew",
+        "cause": "Fungal pathogens including Erysiphe cichoracearum.",
+        "cure": "Ensure good airflow, rotate crops. Spray sulfur-based fungicide (as per label) or potassium bicarbonate; repeat at first signs. Fertilize 10:10:10 NPK: 60kg/acre."
+    },
+    {
+        "name": "Strawberry___Leaf_scorch",
+        "cause": "Fungus Diplocarpon earlianum.",
+        "cure": "Remove infected leaves. Spray Captan (200g/100L), Myclobutanil (10g/100L) when spots first appear and after rain. Fertilize 10:10:10 NPK: 50–80kg/acre."
+    },
+    {
+        "name": "Strawberry___healthy",
+        "cause": "No disease present.",
+        "cure": "Mulch, practice sanitation, rotate beds. Fertilize 10:10:10 NPK: 50–80kg/acre."
+    },
+    {
+        "name": "Tomato___Bacterial_spot",
+        "cause": "Bacterium Xanthomonas spp.",
+        "cure": "Practice rotation. Spray copper-based bactericide (Copper Oxychloride 200g/100L) every 7–10 days under wet/humid conditions. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Early_blight",
+        "cause": "Fungus Alternaria solani.",
+        "cure": "Remove infected leaves, provide spacing. Spray Mancozeb (200g/100L) or Chlorothalonil at first symptoms. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Late_blight",
+        "cause": "Pathogen Phytophthora infestans.",
+        "cure": "Plant resistant cultivars. Spray Metalaxyl (10g/100L) or Mancozeb at symptom onset, repeat 7–10 days. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Leaf_Mold",
+        "cause": "Fungus Passalora fulva.",
+        "cure": "Space plants, ventilate. Spray Chlorothalonil or copper at label rates if needed. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Septoria_leaf_spot",
+        "cause": "Fungus Septoria lycopersici.",
+        "cure": "Remove affected leaves, avoid overhead watering, spray Chlorothalonil (200g/100L). Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Spider_mites Two-spotted_spider_mite",
+        "cause": "Spider mites Tetranychus urticae.",
+        "cure": "Use miticides (abamectin, spiromesifen) or insecticidal soap as per directions. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Target_Spot",
+        "cause": "Fungus Corynespora cassiicola.",
+        "cure": "Remove infected leaves. Spray Mancozeb (200g/100L) or Chlorothalonil (200g/100L), repeat as needed. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+        "cause": "Virus spread by whiteflies.",
+        "cure": "Control whiteflies (yellow sticky cards, imidacloprid). Use resistant varieties. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___Tomato_mosaic_virus",
+        "cause": "Virus transmitted through contact and contaminated tools.",
+        "cure": "Remove infected plants, sterilize tools regularly. Fertilize 12:12:17 NPK: 80kg/acre."
+    },
+    {
+        "name": "Tomato___healthy",
+        "cause": "No disease present.",
+        "cure": "Practice crop rotation and sanitation. Fertilize 12:12:17 NPK: 80kg/acre."
+    }
+]

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plant Diagnosis Pro — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --bg: #f7fff9;
+      --card: #ffffff;
+      --accent: linear-gradient(90deg,#20e295,#2e8cff);
+      --muted: #6b7a7a;
+      --radius: 20px;
+      --shadow: 0 10px 30px rgba(20,60,40,0.06);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#15332f}
+
+    /* NAV */
+    .nav-wrap{background:var(--accent);padding:0.9rem 1.1rem;position:sticky;top:0;z-index:999}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{color:#fff;font-weight:700;font-size:1.3rem;display:flex;align-items:center;gap:10px}
+    .brand img{height:34px}
+    .nav-links{display:flex;gap:0.9rem;align-items:center}
+    .nav-links a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 12px;border-radius:12px;font-weight:600}
+    .nav-links a:hover{background:rgba(255,255,255,0.15)}
+    .cta{background:#fff;color:var(--accent);padding:8px 14px;border-radius:999px;font-weight:700}
+
+    @media(max-width:860px){
+      .nav-inner{flex-direction:column;align-items:stretch}
+      .nav-links{flex-wrap:wrap;justify-content:center}
+    }
+
+    /* HERO / UPLOAD */
+    .hero{max-width:1200px;margin:3.5rem auto;padding:2.2rem;display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+    .hero-left{padding:2rem;background:linear-gradient(180deg,#f3fff6,#eefaf8);border-radius:20px;box-shadow:var(--shadow)}
+    .title{font-size:2.1rem;margin:0 0 0.6rem 0;color:#0b5b3c;font-weight:800}
+    .subtitle{color:var(--muted);font-size:1.05rem;margin-bottom:1rem}
+    .features{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.2rem}
+    .feature{background:#fff;border-radius:14px;padding:0.8rem 1rem;box-shadow:0 6px 20px rgba(15,90,60,0.04);min-width:160px}
+    .feature i{color:#1f9b61;margin-right:8px}
+
+    /* Upload card */
+    .upload-card{background:var(--card);padding:1.6rem;border-radius:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center}
+    .upload-card h3{margin:0 0 0.6rem 0;color:#0b5b3c}
+    .file-input{width:100%;padding:12px;border-radius:12px;border:1px dashed #dbeee0;background:#f7fff8}
+    .btn-upload{margin-top:0.9rem;padding:10px 18px;border-radius:12px;border:none;background:linear-gradient(90deg,#13ab74,#179c6b);color:#fff;font-weight:700;cursor:pointer}
+    .small-note{font-size:0.92rem;color:var(--muted);margin-top:0.6rem}
+
+    /* RESULT */
+    .result-wrap{max-width:1100px;margin:1.8rem auto;padding:1rem}
+    .result-card{display:flex;gap:1.2rem;padding:1.25rem;border-radius:14px;background:#fff;box-shadow:0 12px 36px rgba(10,40,30,0.04)}
+    .result-img{width:320px;height:auto;border-radius:10px;object-fit:cover}
+    .result-body{flex:1}
+    .result-body h4{margin:0 0 0.5rem 0;color:#136c4e}
+    .result-body p{margin:0.45rem 0;color:#536b62}
+
+    /* FOOTER */
+    footer{max-width:1200px;margin:3rem auto 2rem;padding:1.5rem;text-align:center;color:#2b4f43}
+
+    @media(max-width:960px){
+      .hero{grid-template-columns:1fr;padding:1rem}
+      .result-card{flex-direction:column;align-items:center}
+      .result-img{width:100%}
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="/static/images/logo.svg" alt="logo" onerror="this.style.display='none'">
+        <div>Plant Diagnosis Pro</div>
+      </div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/detection">Detection</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/contact">Contact</a>
+        <a href="/login" class="cta">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO + UPLOAD -->
+  <main class="hero">
+    <div class="hero-left">
+      <h1 class="title">Detect plant disease<br><span style="font-weight:600;color:#145a42">accurately with AI</span></h1>
+      <div class="subtitle">Upload a clear leaf photo and get instant diagnosis, causes & treatment suggestions.</div>
+
+      <div class="features">
+        <div class="feature"><i class="fa-solid fa-bolt"></i> Fast results</div>
+        <div class="feature"><i class="fa-solid fa-shield-virus"></i> Treatment tips</div>
+        <div class="feature"><i class="fa-solid fa-chart-line"></i> Track history</div>
+      </div>
+
+      <div style="margin-top:1.2rem;color:var(--muted)">Tip: Use a well-lit photo with the leaf centered for best results.</div>
+    </div>
+
+    <aside class="upload-card">
+      <h3>Upload Image</h3>
+      <form action="/upload/" method="post" enctype="multipart/form-data" style="width:100%">
+        <input class="file-input" type="file" name="img" accept="image/png, image/jpeg, image/jpg" required>
+        <button class="btn-upload" type="submit">Analyze Image</button>
+      </form>
+      <div class="small-note">Supported: JPG, JPEG, PNG — Max recommended: 8MB</div>
+    </aside>
+  </main>
+
+  <!-- RESULT (renders when Flask passes `result=True`) -->
+  {% if result %}
+  <section class="result-wrap">
+    <div class="result-card">
+      <img src="{{ imagepath }}" alt="uploaded" class="result-img">
+      <div class="result-body">
+        <h4>Prediction:</h4>
+        <!-- <p><strong>Cause:</strong> {{ prediction.get('cause', 'Not available') if prediction is mapping else '' }}</p>
+        <p><strong>Cure:</strong> {{ prediction.get('cure', 'Not available') if prediction is mapping else '' }}</p> -->
+        <p><strong>Cause:</strong> {{ prediction.cause }}</p>
+<p><strong>Cure:</strong> {{ prediction.cure }}</p>
+
+        <div style="margin-top:12px">
+          <a href="{{ contourimg }}" target="_blank" style="text-decoration:none;color:#0f8b5b;font-weight:700">View contour output</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 <strong>Plant Diagnosis Pro</strong> — Made by <span style="color:#ff6b6b">OMKAR</span>
+  </footer>
+
+</body>
+</html>

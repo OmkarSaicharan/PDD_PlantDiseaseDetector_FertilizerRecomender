@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Plant Disease Detector</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-green-700 text-white py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">Plant Disease Detector</h1>
+      <div class="space-x-4">
+        <a href="/" class="hover:text-gray-200">Home</a>
+        <a href="/about" class="font-semibold text-yellow-300">About</a>
+        <a href="/fast-disease-detection" class="hover:text-gray-200">Detection</a>
+        <a href="/dashboard-history" class="hover:text-gray-200">Dashboard</a>
+        <a href="/support-contact" class="hover:text-gray-200">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="bg-green-600 text-white py-20 shadow-md">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold">About Our Project</h2>
+      <p class="text-lg mt-3">Empowering farmers with AI-driven plant disease detection.</p>
+    </div>
+  </header>
+
+  <!-- About Content -->
+  <section class="container mx-auto px-6 py-12">
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-bold mb-4">🌱 What is Plant Disease Detector?</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Plant Disease Detector is an AI-powered application designed to analyze plant leaf images and detect possible diseases.
+        By combining deep learning and image processing techniques, the system provides fast and accurate predictions to help
+        farmers prevent crop loss.
+      </p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-4">🧠 How It Works</h3>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Users upload an image of a plant leaf.</li>
+        <li>The system processes the image using a CNN-based trained model.</li>
+        <li>Contours and infected areas are detected via image processing.</li>
+        <li>The model predicts the disease with high accuracy.</li>
+        <li>A detailed result and guidance is shown to the user.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mt-8 mb-4">🚀 Why This Project?</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Manual plant disease identification is time-consuming and requires expert knowledge.
+        This tool automates early detection, reduces financial loss, and supports smart agriculture.
+      </p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-4">👨‍💻 Technologies Used</h3>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <li class="bg-gray-200 p-3 text-center rounded-md">TensorFlow</li>
+        <li class="bg-gray-200 p-3 text-center rounded-md">Flask</li>
+        <li class="bg-gray-200 p-3 text-center rounded-md">OpenCV</li>
+        <li class="bg-gray-200 p-3 text-center rounded-md">Image Processing</li>
+        <li class="bg-gray-200 p-3 text-center rounded-md">Deep Learning</li>
+        <li class="bg-gray-200 p-3 text-center rounded-md">Tailwind CSS</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 text-center">
+    <p>&copy; 2025 Plant Disease Detector | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
