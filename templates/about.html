@@ -3,75 +3,862 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Plant Disease Detector</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>About | Plant Diagnosis Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-dark: #0f172a;
+      --primary-light: #f8fafc;
+      --primary-green: #059669;
+      --soft-green: #d1fae5;
+      --accent-teal: #0d9488;
+      --accent-amber: #f59e0b;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    body {
+      background-color: var(--primary-light);
+      color: var(--gray-800);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--primary-dark);
+    }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo span {
+      color: var(--primary-green);
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-green);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .nav-link.active {
+      color: var(--primary-green);
+    }
+    
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 12rem 0 5rem;
+      background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(5, 150, 105, 0.05) 0%, rgba(13, 148, 136, 0.05) 100%);
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-dark);
+    }
+    
+    .hero h1 span {
+      color: var(--primary-green);
+      position: relative;
+    }
+    
+    .hero h1 span::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: var(--soft-green);
+      z-index: -1;
+      border-radius: 4px;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--gray-700);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      background: var(--primary-green);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: 2px solid var(--primary-green);
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background: white;
+      color: var(--primary-green);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    /* About Content Section */
+    .section {
+      padding: 6rem 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title p {
+      color: var(--gray-600);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .about-content {
+      background: white;
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+    }
+    
+    .about-content h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .about-content p {
+      color: var(--gray-700);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    
+    .feature-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    
+    .feature-list li {
+      padding: 0.75rem 0;
+      color: var(--gray-700);
+      position: relative;
+      padding-left: 2rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .feature-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary-green);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    
+    /* Technologies Grid */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .tech-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s ease;
+      border: 1px solid var(--gray-200);
+      text-align: center;
+    }
+    
+    .tech-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-green);
+    }
+    
+    .tech-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--soft-green) 0%, #f0fdf4 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    
+    .tech-icon i {
+      font-size: 1.5rem;
+      color: var(--primary-green);
+    }
+    
+    .tech-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary-dark);
+    }
+    
+    .tech-card p {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+    }
+    
+    /* Why This Project Section */
+    .why-section {
+      background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+      border-radius: 16px;
+      padding: 3rem;
+      margin-top: 3rem;
+    }
+    
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .why-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--soft-green) 0%, #f0fdf4 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .why-icon i {
+      font-size: 1.25rem;
+      color: var(--primary-green);
+    }
+    
+    .why-content h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+    
+    .why-content p {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .footer-logo span {
+      color: var(--primary-green);
+    }
+    
+    .footer p {
+      color: var(--gray-300);
+      line-height: 1.7;
+    }
+    
+    .footer-links h4 {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+    
+    .footer-links ul {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: var(--gray-300);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-green);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: var(--primary-green);
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--gray-400);
+      font-size: 0.875rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-lg);
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .hero {
+        padding: 10rem 0 3rem;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-content {
+        padding: 2rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .section {
+        padding: 4rem 0;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero::before {
+        width: 100%;
+        clip-path: none;
+      }
+    }
+  </style>
 </head>
-
-<body class="bg-gray-100">
-
-  <!-- Navbar -->
-  <nav class="bg-green-700 text-white py-4 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-2xl font-bold">Plant Disease Detector</h1>
-      <div class="space-x-4">
-        <a href="/" class="hover:text-gray-200">Home</a>
-        <a href="/about" class="font-semibold text-yellow-300">About</a>
-        <a href="/fast-disease-detection" class="hover:text-gray-200">Detection</a>
-        <a href="/dashboard-history" class="hover:text-gray-200">Dashboard</a>
-        <a href="/support-contact" class="hover:text-gray-200">Contact</a>
-      </div>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <i class="fas fa-seedling"></i>
+        Plant<span>Diagnosis</span>Pro
+      </a>
+      
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-menu">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/about" class="nav-link active">About</a></li>
+        <li><a href="/fast-disease-detection" class="nav-link">Detection</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <header class="bg-green-600 text-white py-20 shadow-md">
-    <div class="container mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold">About Our Project</h2>
-      <p class="text-lg mt-3">Empowering farmers with AI-driven plant disease detection.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>About <span>Plant Diagnosis Pro</span></h1>
+        <p>Empowering farmers and gardeners with AI-driven plant disease detection for healthier crops and sustainable agriculture.</p>
+        <a href="/fast-disease-detection" class="btn">
+          Try Detection Now
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
-  </header>
+  </section>
 
   <!-- About Content -->
-  <section class="container mx-auto px-6 py-12">
-    <div class="bg-white rounded-lg shadow-lg p-8">
-      <h3 class="text-2xl font-bold mb-4">🌱 What is Plant Disease Detector?</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Plant Disease Detector is an AI-powered application designed to analyze plant leaf images and detect possible diseases.
-        By combining deep learning and image processing techniques, the system provides fast and accurate predictions to help
-        farmers prevent crop loss.
-      </p>
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Mission & Technology</h2>
+        <p>Combining cutting-edge AI with agricultural expertise to revolutionize plant health management</p>
+      </div>
 
-      <h3 class="text-2xl font-bold mt-8 mb-4">🧠 How It Works</h3>
-      <ul class="list-disc pl-6 text-gray-700 space-y-2">
-        <li>Users upload an image of a plant leaf.</li>
-        <li>The system processes the image using a CNN-based trained model.</li>
-        <li>Contours and infected areas are detected via image processing.</li>
-        <li>The model predicts the disease with high accuracy.</li>
-        <li>A detailed result and guidance is shown to the user.</li>
-      </ul>
+      <div class="about-content">
+        <h3><i class="fas fa-seedling"></i> What is Plant Diagnosis Pro?</h3>
+        <p>
+          Plant Diagnosis Pro is an advanced AI-powered application designed to analyze plant leaf images and detect possible diseases with remarkable accuracy. By combining deep learning and sophisticated image processing techniques, our system provides fast and reliable predictions to help farmers prevent crop loss and maximize yield.
+        </p>
+        
+        <h3><i class="fas fa-brain"></i> How It Works</h3>
+        <ul class="feature-list">
+          <li>Users upload an image of a plant leaf through our intuitive interface</li>
+          <li>The system processes the image using a CNN-based trained model</li>
+          <li>Contours and infected areas are detected via advanced image processing</li>
+          <li>The model predicts the disease with high accuracy using machine learning</li>
+          <li>A detailed result with guidance and treatment recommendations is shown</li>
+          <li>Historical data is stored for tracking disease patterns and prevention</li>
+        </ul>
+      </div>
 
-      <h3 class="text-2xl font-bold mt-8 mb-4">🚀 Why This Project?</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Manual plant disease identification is time-consuming and requires expert knowledge.
-        This tool automates early detection, reduces financial loss, and supports smart agriculture.
-      </p>
+      <!-- Technologies Used -->
+      <div class="section-title" style="margin-top: 4rem;">
+        <h2>Technologies Used</h2>
+        <p>Built with modern technologies for optimal performance and accuracy</p>
+      </div>
 
-      <h3 class="text-2xl font-bold mt-8 mb-4">👨‍💻 Technologies Used</h3>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <li class="bg-gray-200 p-3 text-center rounded-md">TensorFlow</li>
-        <li class="bg-gray-200 p-3 text-center rounded-md">Flask</li>
-        <li class="bg-gray-200 p-3 text-center rounded-md">OpenCV</li>
-        <li class="bg-gray-200 p-3 text-center rounded-md">Image Processing</li>
-        <li class="bg-gray-200 p-3 text-center rounded-md">Deep Learning</li>
-        <li class="bg-gray-200 p-3 text-center rounded-md">Tailwind CSS</li>
-      </ul>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h4>TensorFlow</h4>
+          <p>Deep learning framework for training accurate disease detection models</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h4>Flask</h4>
+          <p>Lightweight Python web framework for backend API and server logic</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h4>OpenCV</h4>
+          <p>Computer vision library for image processing and contour detection</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <i class="fas fa-image"></i>
+          </div>
+          <h4>Image Processing</h4>
+          <p>Advanced algorithms for preprocessing and analyzing plant images</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h4>Deep Learning</h4>
+          <p>Neural networks trained on thousands of plant disease images</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h4>Tailwind CSS</h4>
+          <p>Utility-first CSS framework for responsive and beautiful UI design</p>
+        </div>
+      </div>
+
+      <!-- Why This Project Section -->
+      <div class="why-section">
+        <div class="section-title">
+          <h2>Why This Project Matters</h2>
+          <p>Addressing critical challenges in modern agriculture</p>
+        </div>
+        
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="why-content">
+              <h4>Time-Saving Solution</h4>
+              <p>Manual plant disease identification is time-consuming and requires expert knowledge. Our tool automates the process, providing instant results.</p>
+            </div>
+          </div>
+          
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <div class="why-content">
+              <h4>Reduce Financial Loss</h4>
+              <p>Early detection prevents crop loss, saving farmers significant financial resources and ensuring food security.</p>
+            </div>
+          </div>
+          
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="why-content">
+              <h4>Support Sustainable Agriculture</h4>
+              <p>By enabling timely treatment, we reduce the need for excessive pesticides, promoting environmentally friendly farming practices.</p>
+            </div>
+          </div>
+          
+          <div class="why-item">
+            <div class="why-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="why-content">
+              <h4>Data-Driven Insights</h4>
+              <p>Track disease patterns over time and gain valuable insights for better crop management and prevention strategies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-green-700 text-white py-6 text-center">
-    <p>&copy; 2025 Plant Disease Detector | All Rights Reserved</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <i class="fas fa-seedling"></i>
+            Plant<span>Diagnosis</span>Pro
+          </div>
+          <p>Creating AI-powered solutions for healthier plants and sustainable agriculture. We help farmers and gardeners protect their crops with cutting-edge technology.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/fast-disease-detection">Detection</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="/fast-disease-detection">AI Detection</a></li>
+            <li><a href="/dashboard-history">History Tracking</a></li>
+            <li><a href="#">Treatment Guides</a></li>
+            <li><a href="#">Disease Database</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:support@plantdiagnosispro.com">support@plantdiagnosispro.com</a></li>
+            <li><a href="/support-contact">Support Center</a></li>
+            <li>Agricultural Technology Division</li>
+            <li>Smart Farming Solutions</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Plant Diagnosis Pro | All Rights Reserved | Made by <span style="color:#10b981">OMKAR</span></p>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Add hover effect to tech cards
+    document.querySelectorAll('.tech-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+    
+    // Initialize on load
+    window.addEventListener('load', () => {
+      // Add animation to elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all animated elements
+      document.querySelectorAll('.tech-card, .why-item, .about-content').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>

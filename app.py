@@ -37,6 +37,7 @@ def uploaded_images(filename):
 
 # Home route
 @app.route('/', methods=['GET'])
+
 def home():
     return render_template("home.html")
 
